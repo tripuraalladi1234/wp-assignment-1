@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – LearnSphere</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Learn<span>Sphere</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Get in <em>Touch</em></h1>
+      <p>We're here to help. Reach out to us for any questions or inquiries.</p>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-layout">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2>Contact <em>Information</em></h2>
+          <p>Feel free to reach out to us through any of the following channels. We aim to respond within 24 hours.</p>
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Address</h4>
+              <p>LearnSphere Pvt. Ltd.<br />Plot No. 42, Madhapur<br />Hyderabad, Telangana – 500081<br />India</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:info@learnsphere.in">info@learnsphere.in</a></p>
+              <p><a href="mailto:support@learnsphere.in">support@learnsphere.in</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <p>+91 98765 43210</p>
+              <p>+91 40-2345-6789 (Office)</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Monday – Friday: 9:00 AM – 6:00 PM<br />Saturday: 10:00 AM – 4:00 PM<br />Sunday: Closed</p>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" class="social-btn">in LinkedIn</a>
+            <a href="#" class="social-btn">𝕏 Twitter</a>
+            <a href="#" class="social-btn">▶ YouTube</a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap">
+          <h2>Send Us a <em>Message</em></h2>
+
+          <div id="contact-success" class="alert alert-success" style="display:none;">
+            ✅ Your message has been sent! We'll get back to you within 24 hours.
+          </div>
+
+          <div class="auth-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="c-name">Full Name *</label>
+                <input type="text" id="c-name" placeholder="Your full name" />
+                <span class="field-error" id="err-c-name"></span>
+              </div>
+              <div class="form-group">
+                <label for="c-email">Email Address *</label>
+                <input type="email" id="c-email" placeholder="you@example.com" />
+                <span class="field-error" id="err-c-email"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="c-phone">Phone Number</label>
+              <input type="tel" id="c-phone" placeholder="+91 XXXXX XXXXX" />
+            </div>
+
+            <div class="form-group">
+              <label for="c-subject">Subject *</label>
+              <select id="c-subject">
+                <option value="">-- Select a topic --</option>
+                <option value="course">Course Inquiry</option>
+                <option value="payment">Payment Issue</option>
+                <option value="technical">Technical Support</option>
+                <option value="partnership">Partnership</option>
+                <option value="other">Other</option>
+              </select>
+              <span class="field-error" id="err-c-subject"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="c-message">Message *</label>
+              <textarea id="c-message" rows="5" placeholder="Write your message here..."></textarea>
+              <span class="field-error" id="err-c-message"></span>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-lg" onclick="validateContact()">
+              Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map placeholder -->
+      <div class="map-placeholder">
+        <div class="map-inner">
+          📍 <strong>LearnSphere HQ</strong> – Madhapur, Hyderabad, Telangana
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="logo">Learn<span>Sphere</span></div><p>Empowering learners worldwide with quality education.</p></div>
+        <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="courses.html">Courses</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Account</h4><ul><li><a href="register.html">Register</a></li><li><a href="login.html">Login</a></li></ul></div>
+        <div><h4>Contact</h4><p>📧 info@learnsphere.in</p><p>📞 +91 98765 43210</p><p>📍 Hyderabad, India</p></div>
+      </div>
+      <div class="footer-bottom"><p>© 2026 LearnSphere. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+      document.querySelector('.nav-actions').classList.toggle('open');
+    }
+
+    function validateContact() {
+      document.querySelectorAll('.field-error').forEach(e => e.textContent = '');
+      document.querySelectorAll('input, textarea, select').forEach(i => i.classList.remove('input-error'));
+      document.getElementById('contact-success').style.display = 'none';
+
+      const name = document.getElementById('c-name').value.trim();
+      const email = document.getElementById('c-email').value.trim();
+      const subject = document.getElementById('c-subject').value;
+      const message = document.getElementById('c-message').value.trim();
+      let valid = true;
+
+      if (!name || name.length < 2) {
+        document.getElementById('err-c-name').textContent = 'Please enter your full name.';
+        document.getElementById('c-name').classList.add('input-error');
+        valid = false;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email || !emailRegex.test(email)) {
+        document.getElementById('err-c-email').textContent = 'Please enter a valid email address.';
+        document.getElementById('c-email').classList.add('input-error');
+        valid = false;
+      }
+
+      if (!subject) {
+        document.getElementById('err-c-subject').textContent = 'Please select a subject.';
+        document.getElementById('c-subject').classList.add('input-error');
+        valid = false;
+      }
+
+      if (!message || message.length < 20) {
+        document.getElementById('err-c-message').textContent = 'Please write a message (at least 20 characters).';
+        document.getElementById('c-message').classList.add('input-error');
+        valid = false;
+      }
+
+      if (valid) {
+        document.getElementById('contact-success').style.display = 'block';
+        document.getElementById('c-name').value = '';
+        document.getElementById('c-email').value = '';
+        document.getElementById('c-phone').value = '';
+        document.getElementById('c-subject').value = '';
+        document.getElementById('c-message').value = '';
+      }
+    }
+  </script>
+</body>
+</html>

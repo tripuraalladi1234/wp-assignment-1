@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LearnSphere – Expand Your Horizons</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Learn<span>Sphere</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <!-- HERO / BANNER -->
+  <header class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">✦ Welcome to LearnSphere</p>
+      <h1 class="hero-title">Expand Your<br /><em>Horizons</em> with<br />Expert-Led Courses</h1>
+      <p class="hero-subtitle">Join thousands of learners building real skills for the real world. From web development to data science — your journey starts here.</p>
+      <div class="hero-cta">
+        <a href="courses.html" class="btn btn-primary btn-lg">Explore Courses</a>
+        <a href="register.html" class="btn btn-ghost btn-lg">Get Started Free</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>12,000+</strong><span>Students</span></div>
+        <div class="stat"><strong>200+</strong><span>Courses</span></div>
+        <div class="stat"><strong>50+</strong><span>Instructors</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hc-badge">🔥 Most Popular</div>
+        <h3>Full-Stack Web Dev</h3>
+        <p>HTML · CSS · JS · Node · React</p>
+        <div class="hc-stars">★★★★★ <span>4.9</span></div>
+        <a href="course-details.html" class="btn btn-primary btn-sm">View Course →</a>
+      </div>
+      <div class="floating-tag t1">📚 New: AI & ML</div>
+      <div class="floating-tag t2">🎓 Certificate Ready</div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why Choose <em>LearnSphere?</em></h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Industry-Aligned</h3>
+          <p>Curriculum designed with industry experts to match real job requirements.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Learn at Your Pace</h3>
+          <p>Lifetime access to all course material. Learn anytime, anywhere.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>Certified Credentials</h3>
+          <p>Earn certificates recognised by top companies globally.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>Community Support</h3>
+          <p>Join a thriving community of learners and mentors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POPULAR COURSES PREVIEW -->
+  <section class="popular-courses">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Popular <em>Courses</em></h2>
+        <a href="courses.html" class="link-arrow">View All →</a>
+      </div>
+      <div class="courses-grid">
+        <div class="course-card">
+          <div class="course-thumb web"></div>
+          <div class="course-body">
+            <span class="course-category">Development</span>
+            <h3>Full-Stack Web Development</h3>
+            <p class="instructor">👤 Dr. Priya Sharma</p>
+            <div class="course-meta">
+              <span class="rating">★ 4.9 (1.2k)</span>
+              <span class="price">₹2,499</span>
+            </div>
+            <a href="course-details.html" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-thumb data"></div>
+          <div class="course-body">
+            <span class="course-category">Data Science</span>
+            <h3>Data Science with Python</h3>
+            <p class="instructor">👤 Rahul Verma</p>
+            <div class="course-meta">
+              <span class="rating">★ 4.8 (980)</span>
+              <span class="price">₹1,999</span>
+            </div>
+            <a href="course-details.html" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-thumb ui"></div>
+          <div class="course-body">
+            <span class="course-category">Design</span>
+            <h3>UI/UX Design Masterclass</h3>
+            <p class="instructor">👤 Ananya Kapoor</p>
+            <div class="course-meta">
+              <span class="rating">★ 4.7 (740)</span>
+              <span class="price">₹1,799</span>
+            </div>
+            <a href="course-details.html" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial-section">
+    <div class="container">
+      <h2 class="section-title">What Our <em>Students Say</em></h2>
+      <div class="testimonials">
+        <div class="testimonial-card">
+          <p>"LearnSphere completely transformed my career. Within 6 months I landed my first dev job!"</p>
+          <div class="t-author">— Siddharth M., Hyderabad</div>
+        </div>
+        <div class="testimonial-card">
+          <p>"The instructors are incredibly knowledgeable. Best online learning platform I've used."</p>
+          <div class="t-author">— Divya R., Bangalore</div>
+        </div>
+        <div class="testimonial-card">
+          <p>"Affordable, comprehensive, and genuinely fun. I finished my data science course in 3 months."</p>
+          <div class="t-author">— Arjun K., Chennai</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">Learn<span>Sphere</span></div>
+          <p>Empowering learners worldwide with quality education.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>📧 info@learnsphere.in</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📍 Hyderabad, India</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 LearnSphere. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+      document.querySelector('.nav-actions').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
