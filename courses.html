@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses – LearnSphere</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Learn<span>Sphere</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html" class="active">Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>All <em>Courses</em></h1>
+      <p>Choose from 200+ expert-led courses across tech, design, and business.</p>
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterCourses('all', this)">All</button>
+        <button class="filter-btn" onclick="filterCourses('development', this)">Development</button>
+        <button class="filter-btn" onclick="filterCourses('data', this)">Data Science</button>
+        <button class="filter-btn" onclick="filterCourses('design', this)">Design</button>
+        <button class="filter-btn" onclick="filterCourses('business', this)">Business</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="courses-page">
+    <div class="container">
+      <div class="courses-grid" id="coursesGrid">
+
+        <div class="course-card" data-cat="development">
+          <div class="course-thumb web"></div>
+          <div class="course-body">
+            <span class="course-category">Development</span>
+            <h3>Full-Stack Web Development</h3>
+            <p class="instructor">👤 Dr. Priya Sharma</p>
+            <p class="course-desc">Master HTML, CSS, JavaScript, Node.js, and React to build complete web apps from scratch.</p>
+            <div class="course-meta">
+              <span class="rating">★ 4.9</span>
+              <span class="reviews">(1,200 reviews)</span>
+              <span class="price">₹2,499</span>
+            </div>
+            <a href="course-details.html" class="btn btn-primary btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-cat="data">
+          <div class="course-thumb data"></div>
+          <div class="course-body">
+            <span class="course-category">Data Science</span>
+            <h3>Data Science with Python</h3>
+            <p class="instructor">👤 Rahul Verma</p>
+            <p class="course-desc">Learn pandas, NumPy, Matplotlib, Scikit-learn, and build real-world ML models.</p>
+            <div class="course-meta">
+              <span class="rating">★ 4.8</span>
+              <span class="reviews">(980 reviews)</span>
+              <span class="price">₹1,999</span>
+            </div>
+            <a href="course-details.html" class="btn btn-primary btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-cat="design">
+          <div class="course-thumb ui"></div>
+          <div class="course-body">
+            <span class="course-category">Design</span>
+            <h3>UI/UX Design Masterclass</h3>
+            <p class="instructor">👤 Ananya Kapoor</p>
+            <p class="course-desc">Learn Figma, design systems, user research, and prototyping for modern products.</p>
+            <div class="course-meta">
+              <span class="rating">★ 4.7</span>
+              <span class="reviews">(740 reviews)</span>
+              <span class="price">₹1,799</span>
+            </div>
+            <a href="course-details.html" class="btn btn-primary btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-cat="development">
+          <div class="course-thumb react"></div>
+          <div class="course-body">
+            <span class="course-category">Development</span>
+            <h3>React & Next.js Bootcamp</h3>
+            <p class="instructor">👤 Vikram Singh</p>
+            <p class="course-desc">Build performant web applications with React hooks, context, and Next.js SSR/SSG.</p>
+            <div class="course-meta">
+              <span class="rating">★ 4.8</span>
+              <span class="reviews">(870 reviews)</span>
+              <span class="price">₹2,199</span>
+            </div>
+            <a href="course-details.html" class="btn btn-primary btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-cat="data">
+          <div class="course-thumb ai"></div>
+          <div class="course-body">
+            <span class="course-category">Data Science</span>
+            <h3>Artificial Intelligence & ML</h3>
+            <p class="instructor">👤 Dr. Meena Iyer</p>
+            <p class="course-desc">Deep learning, neural networks, NLP, and computer vision using TensorFlow and PyTorch.</p>
+            <div class="course-meta">
+              <span class="rating">★ 4.9</span>
+              <span class="reviews">(1,100 reviews)</span>
+              <span class="price">₹3,499</span>
+            </div>
+            <a href="course-details.html" class="btn btn-primary btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-cat="business">
+          <div class="course-thumb biz"></div>
+          <div class="course-body">
+            <span class="course-category">Business</span>
+            <h3>Digital Marketing Fundamentals</h3>
+            <p class="instructor">👤 Sneha Pillai</p>
+            <p class="course-desc">SEO, social media strategy, email marketing, analytics, and growth hacking techniques.</p>
+            <div class="course-meta">
+              <span class="rating">★ 4.6</span>
+              <span class="reviews">(620 reviews)</span>
+              <span class="price">₹1,299</span>
+            </div>
+            <a href="course-details.html" class="btn btn-primary btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-cat="development">
+          <div class="course-thumb java"></div>
+          <div class="course-body">
+            <span class="course-category">Development</span>
+            <h3>Java & Spring Boot</h3>
+            <p class="instructor">👤 Aakash Reddy</p>
+            <p class="course-desc">Core Java, OOP, Spring Boot REST APIs, Hibernate, and microservices architecture.</p>
+            <div class="course-meta">
+              <span class="rating">★ 4.7</span>
+              <span class="reviews">(910 reviews)</span>
+              <span class="price">₹2,099</span>
+            </div>
+            <a href="course-details.html" class="btn btn-primary btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+        <div class="course-card" data-cat="design">
+          <div class="course-thumb gfx"></div>
+          <div class="course-body">
+            <span class="course-category">Design</span>
+            <h3>Graphic Design with Canva & PS</h3>
+            <p class="instructor">👤 Ritu Malhotra</p>
+            <p class="course-desc">Logo design, brand identity, typography, and layout design for print and digital media.</p>
+            <div class="course-meta">
+              <span class="rating">★ 4.5</span>
+              <span class="reviews">(530 reviews)</span>
+              <span class="price">₹999</span>
+            </div>
+            <a href="course-details.html" class="btn btn-primary btn-sm">Enroll Now</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo">Learn<span>Sphere</span></div>
+          <p>Empowering learners worldwide with quality education.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Account</h4>
+          <ul>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>📧 info@learnsphere.in</p>
+          <p>📞 +91 98765 43210</p>
+          <p>📍 Hyderabad, India</p>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© 2026 LearnSphere. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('open');
+      document.querySelector('.nav-actions').classList.toggle('open');
+    }
+    function filterCourses(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.course-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'flex' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
